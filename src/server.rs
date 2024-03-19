@@ -21,6 +21,7 @@ use tokio::{
     io::{AsyncRead, AsyncWrite},
     net::{TcpListener, TcpStream},
 };
+use tracing::Instrument;
 
 /// HTTP server.
 pub struct Server<A = DefaultAcceptor> {
@@ -215,7 +216,7 @@ impl<A> Server<A> {
                             _ = &mut serve_future => (),
                         }
                     }
-                });
+                }.in_current_span());
             }
         };
 
