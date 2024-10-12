@@ -49,7 +49,7 @@ This crate uses `#![forbid(unsafe_code)]` to ensure everything is implemented in
 
 ## License
 
-This project is licensed under the [MIT license](LICENSE).
+Please see LICENSE.md for license information.
 
 [axum]: https://crates.io/crates/axum
 [hyper]: https://crates.io/crates/hyper
